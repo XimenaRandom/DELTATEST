@@ -1,0 +1,81 @@
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Dd]ist/
+[Dd]ebug-*/
+[Dd]ist-*/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# User-specific files for Visual Studio for Mac
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer files for Visual Studio
+*.exe
+
+# Windows Installer files for .NET Core
+*.dll
+*.pdb
+*.vsix
+
+# VS for Mac
+.vscode/
+
+# JetBrains Rider
+.idea/
+
+# .NET Core files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Logs
+logs/
+
+# .NET Framework specific
+# Windows image file and database file for SQL Server
+*.mdf
+*.ldf
+
+# User preferences for ASP.NET Core
+.vs/
+
+# Temporary files from Visual Studio
+.vs2019/
+
+# Build directories from common tools
+bin/
+obj/
+
+# Visual Studio for Mac
+.vscode/
+.idea/
+
+# npm and yarn files
+node_modules/
+
+# DotCover
+.idea/
+
+# Generated files
+*.cache
+*.wlog
+
+# Ignore publish output directories
+Publish/
+
+# SQLite database files
+*.sqlite
