@@ -1,23 +1,92 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+<!-- ENCABEZADO GLOBAL -->
+<div class="top-row ps-3 navbar navbar-expand-lg navbar-light bg-light border-bottom shadow-sm">
+    <div class="container-fluid">
+        <!-- Logo y nombre -->
+        <a class="navbar-brand fw-bold text-orange" href="">DELTATEST</a>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        <!-- Botón responsive -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Enlaces -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-center">
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                        <span class="bi bi-house-door-fill me-1"></span> Inicio
+                    </NavLink>
+                </li>
+
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="sobre-nosotros">
+                        <span class="bi bi-people-fill me-1"></span> Sobre Nosotros
+                    </NavLink>
+                </li>
+
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="contacto">
+                        <span class="bi bi-envelope-fill me-1"></span> Contacto
+                    </NavLink>
+                </li>
+
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="redes">
+                        <span class="bi bi-share-fill me-1"></span> Redes Sociales
+                    </NavLink>
+                </li>
+
+                <li class="nav-item">
+                    <button class="btn btn-orange ms-3">Sign In</button>
+                </li>
+            </ul>
         </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
+    </div>
 </div>
 
-<div id="blazor-error-ui">
-    An unhandled error has occurred.
-    <a href="" class="reload">Reload</a>
-    <a class="dismiss">🗙</a>
+<!-- CONTENIDO DE CADA PÁGINA -->
+<div class="main-content">
+    @Body
 </div>
+
+<style>
+    .text-orange {
+        color: #f58220 !important;
+    }
+
+    .btn-orange {
+        background-color: #f58220;
+        color: white;
+        border: none;
+        padding: 6px 16px;
+        border-radius: 6px;
+        transition: background-color 0.3s;
+    }
+
+        .btn-orange:hover {
+            background-color: #d86c0a;
+        }
+
+    .navbar-nav .nav-link {
+        color: #333 !important;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+        .navbar-nav .nav-link:hover {
+            color: #f58220 !important;
+        }
+
+    .navbar-brand {
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
+    }
+
+    .main-content {
+        padding: 0;
+        margin: 0;
+    }
+</style>

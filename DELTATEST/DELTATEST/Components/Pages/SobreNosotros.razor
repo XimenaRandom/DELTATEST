@@ -1,0 +1,224 @@
+﻿@page "/sobre-nosotros"
+
+<!-- SECCIÓN DE PRESENTACIÓN -->
+<section class="intro">
+    <div class="intro-card">
+        <p>
+            En Laboratorios Delta S.A., somos una empresa dedicada al control de calidad de productos farmacéuticos,
+            cosméticos y de higiene. Nuestro compromiso es la mejora continua para garantizar la eficacia de nuestro equipo
+            y asegurar el cumplimiento de las normas internas en cada una de sus áreas.
+        </p>
+        <button class="btn-principal">Página Principal</button>
+    </div>
+</section>
+
+<!-- QUÉ HACEMOS -->
+<section class="section">
+    <h2>Qué hacemos y cómo lo hacemos</h2>
+    <ul>
+        <li>Implementamos evaluaciones por personal fijo una vez al año.</li>
+        <li>Formamos y rotamos al personal de acuerdo a sus aptitudes.</li>
+        <li>Aplicamos un sistema estandarizado para medir resultados y desempeño.</li>
+        <li>Garantizamos la mejora continua mediante indicadores de calidad.</li>
+    </ul>
+</section>
+
+<!-- NUESTROS VALORES -->
+<section class="section valores">
+    <h2>Nuestros valores</h2>
+    <ul>
+        <li>Nos aseguramos de que cada miembro del equipo tenga los conocimientos necesarios para desempeñar su función.</li>
+        <li>Promovemos la ética profesional, compromiso y respeto.</li>
+        <li>Fomentamos el trabajo en equipo y el crecimiento constante.</li>
+    </ul>
+</section>
+
+<!-- MISIÓN -->
+<section class="mision">
+    <h2>MISIÓN</h2>
+    <p>
+        Desarrollar e implementar un sistema eficaz de evaluación, rotación y capacitación del personal del área de Control de Calidad
+        de Laboratorios Delta S.A., que asegure competencia técnica, cumplimiento normativo y trazabilidad documental.
+    </p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div>
+            <h4>Use cases</h4>
+            <ul>
+                <li><a href="#">UI design</a></li>
+                <li><a href="#">UX design</a></li>
+                <li><a href="#">Prototyping</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Community</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Best practices</a></li>
+                <li><a href="#">Guides</a></li>
+            </ul>
+        </div>
+    </div>
+    <p class="footer-copy">© 2025 Laboratorios Delta S.A. - Todos los derechos reservados.</p>
+</footer>
+
+<!-- ESTILOS -->
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        background-color: #fff;
+        color: #333;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        border-bottom: 2px solid #e8e8e8;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .btn-signin {
+        background-color: #f58220;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* INTRO */
+    .intro {
+        background-color: #fff7f2;
+        text-align: center;
+        padding: 3rem 1rem;
+    }
+
+    .intro-card {
+        max-width: 700px;
+        margin: auto;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .btn-principal {
+        background-color: #f58220;
+        color: white;
+        border: none;
+        margin-top: 1rem;
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    /* SECCIONES */
+    .section {
+        padding: 2.5rem 2rem;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .section h2 {
+        color: #333;
+        border-bottom: 2px solid #f58220;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+
+    .section ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        line-height: 1.6;
+    }
+
+    /* MISIÓN */
+    .mision {
+        text-align: center;
+        background-color: #fff7f2;
+        padding: 3rem 2rem;
+    }
+
+    .mision h2 {
+        color: #f58220;
+    }
+
+    .mision p {
+        max-width: 700px;
+        margin: auto;
+        line-height: 1.7;
+    }
+
+    /* FOOTER */
+    .footer {
+        background-color: #c66d1c;
+        color: white;
+        padding: 2rem;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    .footer h4 {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    .footer-copy {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 0.85rem;
+    }
+</style>
+
+@code {
+
+}
