@@ -1,8 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@{
-    ViewData["Title"] = "Inicio de Sesión";
-}
+﻿@page "/IniciarSesion"
 
 <style>
     body {
@@ -32,32 +28,32 @@
         text-align: center;
     }
 
-    .login-box h1 {
-        color: #d59c45;
-        font-weight: bold;
-        margin-bottom: 30px;
-        font-size: 32px;
-    }
+        .login-box h1 {
+            color: #d59c45;
+            font-weight: bold;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
 
     .form-group {
         text-align: left;
         margin-bottom: 20px;
     }
 
-    .form-group label {
-        display: block;
-        font-size: 15px;
-        color: #333;
-        margin-bottom: 5px;
-    }
+        .form-group label {
+            display: block;
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 5px;
+        }
 
-    .form-group input {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        font-size: 14px;
-    }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
 
     .btn-login {
         background-color: #e5a650;
@@ -72,23 +68,23 @@
         transition: background-color 0.3s;
     }
 
-    .btn-login:hover {
-        background-color: #cf923f;
-    }
+        .btn-login:hover {
+            background-color: #cf923f;
+        }
 
     .forgot-password {
         margin-top: 15px;
         font-size: 14px;
     }
 
-    .forgot-password a {
-        text-decoration: none;
-        color: #000;
-    }
+        .forgot-password a {
+            text-decoration: none;
+            color: #000;
+        }
 
-    .forgot-password a:hover {
-        text-decoration: underline;
-    }
+            .forgot-password a:hover {
+                text-decoration: underline;
+            }
 </style>
 
 <div class="login-container">
@@ -111,3 +107,6 @@
     </div>
 </div>
 
+@code {
+
+}
