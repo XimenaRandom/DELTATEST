@@ -1,4 +1,9 @@
 ﻿@page "/IniciarSesion"
+@inject DELTATEST.Services.AutenticacionService AuthService
+@inject NavigationManager Navigation
+@using System.ComponentModel.DataAnnotations
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.JSInterop
 
 <style>
     body {
@@ -90,23 +95,51 @@
 <div class="login-container">
     <div class="login-box">
         <h1>INICIAR SESIÓN</h1>
-        <form>
+
+        <EditForm Model="@model" OnValidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
             <div class="form-group">
                 <label>Correo</label>
-                <input type="email" placeholder="Ingrese su correo" />
+                <InputText @bind-Value="model.Email" class="form-control" />
             </div>
+
             <div class="form-group">
                 <label>Contraseña</label>
-                <input type="password" placeholder="Ingrese su contraseña" />
+                <InputText @bind-Value="model.Password" type="password" class="form-control" />
             </div>
+
+            @if (!string.IsNullOrEmpty(errorMessage))
+            {
+                <div class="text-danger" style="margin-bottom:10px">@errorMessage</div>
+            }
+
             <button type="submit" class="btn-login">Iniciar Sesión</button>
+
             <div class="forgot-password">
                 <a href="#">¿Olvidó su contraseña?</a>
             </div>
-        </form>
+        </EditForm>
     </div>
 </div>
 
 @code {
+    private DELTATEST.Models.LoginModel model = new();
+    private string? errorMessage;
 
+    private async Task HandleValidSubmit()
+    {
+        errorMessage = null;
+        var success = await AuthService.LoginAsync(model);
+        if (success)
+        {
+            // Redirigir a la raíz o a la página que quieras
+            Navigation.NavigateTo("/");
+        }
+        else
+        {
+            errorMessage = "Correo o contraseña inválidos.";
+        }
+    }
 }
